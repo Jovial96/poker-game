@@ -1,5 +1,6 @@
 #pragma once    
 #include "CardTypes.h"
+#include <iostream>
 
 class Card {
 private:
@@ -9,4 +10,6 @@ public:
     Card(Rank r, Suit s);
     Rank getRank() const;
     Suit getSuit() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Card& card);
 };
