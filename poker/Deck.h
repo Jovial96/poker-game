@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include "Card.h"
 
@@ -6,7 +7,7 @@ private:
     std::vector<Card> cards;
 public:
     Deck();
-    void shuffle();
+    void shuffle(); 
     Card dealCard();
     bool isEmpty() const;
 };
