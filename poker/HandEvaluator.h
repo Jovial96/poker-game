@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Card.h"
+#include <map>
 
 enum class HandRank {
     HighCard = 1,
@@ -30,5 +31,6 @@ private:
     static bool isFlush(const std::vector<Card>& cards);
     static bool isStraight(const std::vector<Card>& cards);
     static bool isStraightFlush(const std::vector<Card>& cards);
+    static std::map<int, int> getValueCounts(const std::vector<Card>& cards);
 };
 

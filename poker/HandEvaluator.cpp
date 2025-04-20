@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <set>
+#include <map>
 
 static bool isFlush(const std::vector<Card>& cards) {
     if (cards.empty() || cards.size() < 5) return false;
@@ -64,4 +65,13 @@ static bool isStraightFlush(const std::vector<Card>& cards) {
     }
 
     return isStraight(cards);
+}
+
+static std::map<int, int> getValueCounts(const std::vector<Card>& cards) {
+    std::map<int, int> valueCounts;
+    for (const Card& card: cards) {
+        valueCounts[static_cast<int>(card.getRank())]++;
+    }
+
+    return valueCounts;
 }
