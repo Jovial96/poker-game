@@ -1,5 +1,4 @@
-#pragma once
-#include "Card.h"
+#include "./headers/Card.h"
 #include <iostream>
 #include <string>
 

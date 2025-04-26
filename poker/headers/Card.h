@@ -1,4 +1,6 @@
-#pragma once    
+#ifndef __CardHeader__
+#define __CardHeader__
+
 #include "CardTypes.h"
 #include <iostream>
 
@@ -13,3 +15,5 @@ public:
 
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
 };
+
+#endif

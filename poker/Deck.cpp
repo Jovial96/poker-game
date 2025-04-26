@@ -1,10 +1,11 @@
-#pragma once
-#include "Deck.h"
-#include "Card.h"
+#include "./headers/Deck.h"
+#include "./headers/Card.h"
 #include <random>
+#include <iostream>
+#include <algorithm>
 
 Deck::Deck() {
-    for (int s = 0; s <= 4; s++) {
+    for (int s = 0; s < 4; s++) {
         for (int r = 2; r <= 14; r++) {
             cards.emplace_back(static_cast<Rank>(r), static_cast<Suit>(s));
         }
@@ -26,6 +27,27 @@ Card Deck::dealCard() {
     return top;
 }
 
+std::vector<Card> Deck::dealCards(int count) {
+    std::vector<Card> hand;
+    for (int i = 0; i < count; i++) {
+        hand.push_back(dealCard());
+    }
+
+    return hand;
+}
+
 bool Deck::isEmpty() const {
     return cards.empty();
+}
+
+int Deck::getNumberOfCards() const {
+    return cards.size();
+}
+
+std::ostream& operator<< (std::ostream&os, const Deck& deck) {
+    os << "Remaining Cards: " << deck.getNumberOfCards() << std::endl;
+    for (const Card&card : deck.cards) {
+        os << card << std::endl;
+    }
+    return os;
 }

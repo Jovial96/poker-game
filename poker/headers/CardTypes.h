@@ -1,4 +1,6 @@
-#pragma once    
+#ifndef __CardTypes__
+#define __CardTypes__
+
 enum class Rank {
     Two = 2,
     Three,
@@ -18,3 +20,5 @@ enum class Rank {
 enum class Suit {
     Clubs, Diamonds, Hearts, Spades
 };
+
+#endif
