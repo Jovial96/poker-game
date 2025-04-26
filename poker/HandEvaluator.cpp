@@ -18,48 +18,6 @@ bool HandEvaluator::isFlush(const std::vector<Card>& cards) {
     return true;
 }
 
-// bool HandEvaluator::isStraight(const std::vector<Card>& cards) {
-//     if (cards.empty() || cards.size() != 5) return false;
-    
-//     std::vector<Card> sortedCards = cards;
-//     std::sort(sortedCards.begin(), sortedCards.end(), [](const Card& cardA, const Card& cardB) { return cardA.getRank() > cardB.getRank(); });
-
-//     std::set<Rank> seenRanks;
-
-//     for (const Card& card : sortedCards) {
-//         if (seenRanks.find(card.getRank()) == seenRanks.end()) {
-//             seenRanks.insert(card.getRank());
-//         }
-//     }
-
-//     std::vector<int> rankVals;
-
-//     if (seenRanks.count(Rank::Ace)) {
-//         rankVals.push_back(1);
-//     }
-
-//     for (Rank r : seenRanks) {
-//         rankVals.push_back(static_cast<int>(r));
-//     }
-
-//     std::sort(rankVals.begin(), rankVals.end(), std::greater<int>());
-
-//     for (int i = 0; i <= rankVals.size() - 5; i++) {
-//         bool isSequence = true;
-
-//         for (int j = 0; j < 4; j++) {
-//             if (rankVals[i + j] != rankVals[i + j + 1] + 1) {
-//                 isSequence = false;
-//                 break;
-//             }
-//         }
-
-//         if (isSequence) return true;
-//     }
-
-//     return false;
-// }
-
 bool HandEvaluator::isStraight(const std::vector<Card>& cards) {
     if (cards.size() != 5) return false;
 
