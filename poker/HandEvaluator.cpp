@@ -6,20 +6,36 @@
 #include <set>
 #include <unordered_map>
 
-bool HandEvaluator::isFlush(const std::vector<Card>& cards) {
-    if (cards.empty() || cards.size() != 5) return false;
+HandDetectionResult HandEvaluator::isFlush(const std::vector<Card>& cards) {
+    HandDetectionResult result;
+    if (cards.empty() || cards.size() != 5) {
+        result.isMatch = false;
+        return result;
+    }
     
     Suit suit = cards[0].getSuit();
     for (const Card& card : cards) {
         if (card.getSuit() != suit) {
-            return false;
+            result.isMatch = false;
+            return result;
         }
     }
-    return true;
+    result.isMatch = true;
+
+    for (const Card& card : cards) {
+        result.tiebreakerCards.push_back(static_cast<int>(card.getRank()));
+    }
+    std::sort(result.tiebreakerCards.begin(), result.tiebreakerCards.end(), std::greater<int>());
+
+    return result;
 }
 
-bool HandEvaluator::isStraight(const std::vector<Card>& cards) {
-    if (cards.size() != 5) return false;
+HandDetectionResult HandEvaluator::isStraight(const std::vector<Card>& cards) {
+    HandDetectionResult result;
+    if (cards.size() != 5) {
+        result.isMatch = false;
+        return result;
+    }
 
     std::set<int> uniqueRanks;
 
@@ -32,107 +48,175 @@ bool HandEvaluator::isStraight(const std::vector<Card>& cards) {
     }
 
     std::vector<int> sortedRanks(uniqueRanks.begin(), uniqueRanks.end());
-    std::sort(sortedRanks.begin(), sortedRanks.end());
 
     for (size_t i = 0; i + 4 < sortedRanks.size(); ++i) {
         if (sortedRanks[i] + 1 == sortedRanks[i + 1] &&
             sortedRanks[i] + 2 == sortedRanks[i + 2] &&
             sortedRanks[i] + 3 == sortedRanks[i + 3] &&
             sortedRanks[i] + 4 == sortedRanks[i + 4]) {
-                return true;
+                result.isMatch = true;
+                result.tiebreakerCards.push_back(sortedRanks[i + 4]);
+                return result;
             }
     }
-
-    return false;
+    result.isMatch = false;
+    return result;
 }
 
-bool HandEvaluator::isStraightFlush(const std::vector<Card>& cards) {
-    if (!isFlush(cards)) {
-        return false;
+HandDetectionResult HandEvaluator::isStraightFlush(const std::vector<Card>& cards) {
+    HandDetectionResult result;
+    HandDetectionResult flushResult = isFlush(cards);
+    if (!flushResult.isMatch) {
+        result.isMatch = false;
+        return result;
     }
 
-    return isStraight(cards);
+    HandDetectionResult straightResult = isStraight(cards);
+    if (!straightResult.isMatch) { 
+        result.isMatch = false;
+        return result;
+    }
+
+    return straightResult;
 }
 
-bool HandEvaluator::isRoyalFlush(const std::vector<Card>& cards) {
-    if (!isStraightFlush(cards)) {
-        return false;
+HandDetectionResult HandEvaluator::isRoyalFlush(const std::vector<Card>& cards) {
+    HandDetectionResult result;
+    HandDetectionResult straightFlushResult = isStraightFlush(cards);
+    if (!straightFlushResult.isMatch) {
+        result.isMatch = false;
+        return result;
     }
 
-    std::set<int> royalRanks {10, 11, 12, 13, 14};
-
-    for (const Card&card : cards) {
-        royalRanks.erase(static_cast<int>(card.getRank()));
+    if (straightFlushResult.tiebreakerCards[0] == 14) {
+        result.isMatch = true;
+        return result;
     }
 
-    return royalRanks.empty();
+    return result;
 }
 
-bool HandEvaluator::isPair(const std::unordered_map<int, int>& valueCounts) {
-
-    int pairs = 0;
-    for (const auto& [rank, count] : valueCounts) {
-        if (count == 2) {
-            pairs++;
-        }
-    }
-
-    return pairs == 1;
-}
-
-bool HandEvaluator::isTwoPair(const std::unordered_map<int, int>& valueCounts) {
-
-    int pairs = 0;
-    for (const auto& [rank, count] : valueCounts) {
-        if (count == 2) {
-            pairs++;
-        }
-    }
-
-    return pairs == 2;
-}
-
-bool HandEvaluator::isThreeOfAKind(const std::unordered_map<int, int>& valueCounts) {
-    int threeOfAKind = 0;
-    for (const auto& [rank, count] : valueCounts) {
-        if (count == 3) {
-            threeOfAKind++;
-        }
-    }
-
-    std::cout << threeOfAKind << std::endl;
-
-    return threeOfAKind == 1;
-}
-
-bool HandEvaluator::isQuads(const std::unordered_map<int, int>& valueCounts) {
-    int quads= 0;
-    for (const auto& [rank, count] : valueCounts) {
-        if (count == 4) {
-            quads++;
-        }
-    }
-
-    return quads == 1;
-}
-
-bool HandEvaluator::isFullHouse(const std::unordered_map<int, int>& valueCounts) {
-    int threeRank = -1;
+HandDetectionResult HandEvaluator::isPair(const std::unordered_map<int, int>& valueCounts) {
+    HandDetectionResult result;
+    int pairCount = 0;
+    std::vector<int> kickers;
     int pairRank = -1;
 
     for (const auto& [rank, count] : valueCounts) {
-        if (count >= 3 && rank > threeRank) {
-            threeRank = rank;
+        if (count == 2) {
+            pairCount++;
+            pairRank = rank;
+        } else {
+            kickers.push_back(rank);
         }
     }
 
+    if (pairCount == 1) {
+        result.isMatch = true;
+        result.tiebreakerCards.push_back(pairRank);
+        std::sort(kickers.begin(), kickers.end(), std::greater<>());
+        result.tiebreakerCards.insert(result.tiebreakerCards.end(), kickers.begin(), kickers.end());
+    }
+
+    return result;
+}
+
+HandDetectionResult HandEvaluator::isTwoPair(const std::unordered_map<int, int>& valueCounts) {
+    HandDetectionResult result;
+    int pairCount = 0;
+    std::vector<int> kickers;
+    std::vector<int> pairs;
+
     for (const auto& [rank, count] : valueCounts) {
-        if (rank != threeRank && count >= 2 && rank > pairRank) {
+        if (count == 2) {
+            pairCount++;
+            pairs.push_back(rank);
+        } else {
+            kickers.push_back(rank);
+        }
+    }
+
+    if (pairCount == 2) {
+        result.isMatch = true;
+        std::sort(pairs.begin(), pairs.end(), std::greater<>());
+        result.tiebreakerCards.insert(result.tiebreakerCards.end(), pairs.begin(), pairs.end());
+        std::sort(kickers.begin(), kickers.end(), std::greater<>());
+        result.tiebreakerCards.insert(result.tiebreakerCards.end(), kickers.begin(), kickers.end());
+    }
+
+    return result;
+}
+
+HandDetectionResult HandEvaluator::isThreeOfAKind(const std::unordered_map<int, int>& valueCounts) {
+    HandDetectionResult result;
+    int tripsCount = 0;
+    std::vector<int> kickers;
+    std::vector<int> trips;
+
+    for (const auto& [rank, count] : valueCounts) {
+        if (count == 3) {
+            tripsCount++;
+            trips.push_back(rank);
+        } else {
+            kickers.push_back(rank);
+        }
+    }
+
+    if (tripsCount == 1) {
+        result.isMatch = true;
+        std::sort(trips.begin(), trips.end(), std::greater<>());
+        result.tiebreakerCards.insert(result.tiebreakerCards.end(), trips.begin(), trips.end());
+        std::sort(kickers.begin(), kickers.end(), std::greater<>());
+        result.tiebreakerCards.insert(result.tiebreakerCards.end(), kickers.begin(), kickers.end());
+    }
+
+    return result;
+}
+
+HandDetectionResult HandEvaluator::isQuads(const std::unordered_map<int, int>& valueCounts) {
+    HandDetectionResult result;
+    int quadRank = -1;
+    std::vector<int> kickers;
+
+    for (const auto& [rank, count] : valueCounts) {
+        if (count == 4) {
+            quadRank = rank;
+        } else {
+            kickers.push_back(rank);
+        }
+    }
+
+    if (quadRank != -1) {
+        result.isMatch = true;
+        result.tiebreakerCards.push_back(quadRank); // Quad rank first
+
+        std::sort(kickers.begin(), kickers.end(), std::greater<>());
+        result.tiebreakerCards.insert(result.tiebreakerCards.end(), kickers.begin(), kickers.end());
+    }
+
+    return result;
+}
+
+HandDetectionResult HandEvaluator::isFullHouse(const std::unordered_map<int, int>& valueCounts) {
+    HandDetectionResult result;
+    int tripRank = -1;
+    int pairRank = -1;
+
+    for (const auto& [rank, count] : valueCounts) {
+        if (count == 3) {
+            tripRank = rank;
+        } else if (count == 2) {
             pairRank = rank;
         }
     }
 
-    return threeRank != -1 && pairRank != -1;
+    if (tripRank != -1 && pairRank != -1) {
+        result.isMatch = true;
+        result.tiebreakerCards.push_back(tripRank); 
+        result.tiebreakerCards.push_back(pairRank); 
+    }
+
+    return result;
 }
 
 std::unordered_map<int, int> HandEvaluator::getValueCounts(const std::vector<Card>& cards) {
@@ -151,40 +235,82 @@ std::unordered_map<int, int> HandEvaluator::getValueCounts(const std::vector<Car
 }
 
 EvaluatedHand HandEvaluator::evaluateFiveCardHand(const std::vector<Card>& cards) {
+    EvaluatedHand result;
     std::unordered_map<int, int> valueCounts = getValueCounts(cards);
-    
-    std::cout << "Evaluating Hand" << std::endl;
 
-    if (isRoyalFlush(cards)) {
-        std::cout << "Royal Flush" << std::endl;
-        return {HandRank::RoyalFlush};
-    } else if (isStraightFlush(cards)) {
-        std::cout << "Straight Flush" << std::endl;
-        return {HandRank::StraightFlush}; 
-    } else if (isQuads(valueCounts)) {
-        std::cout << "Quads" << std::endl;
-        return {HandRank::Quads};
-    } else if (isFullHouse(valueCounts)) {
-        std::cout << "Full House" << std::endl;
-        return {HandRank::FullHouse};
-    } else if (isFlush(cards)) {
-        std::cout << "Flush" << std::endl;
-        return {HandRank::Flush};
-    } else if (isThreeOfAKind(valueCounts)) {
-        std::cout << "Three of a kind" << std::endl;
-        return {HandRank::ThreeOfAKind};
-    } else if (isStraight(cards)) {
-        std::cout << "Straight" << std::endl;
-        return {HandRank::Straight};
-    } else if (isTwoPair(valueCounts)) {
-        std::cout << "Two Pair" << std::endl;
-        return {HandRank::TwoPair};
-    } else if (isPair(valueCounts)) {
-        std::cout << "Pair" << std::endl;
-        return {HandRank::OnePair};
-    } else {
-        return {HandRank::HighCard};
+    HandDetectionResult royalFlushResult = isRoyalFlush(cards);
+    if (royalFlushResult.isMatch) {
+        result.rank = HandRank::RoyalFlush;
+        result.tiebreakers = royalFlushResult.tiebreakerCards;
+        return result;
     }
+
+    HandDetectionResult straightFlushResult = isStraightFlush(cards);
+    if (straightFlushResult.isMatch) {
+        result.rank = HandRank::StraightFlush;
+        result.tiebreakers = straightFlushResult.tiebreakerCards;
+        return result;
+    }
+
+    HandDetectionResult quadsResult = isQuads(valueCounts);
+    if (quadsResult.isMatch) {
+        result.rank = HandRank::Quads;
+        result.tiebreakers = quadsResult.tiebreakerCards;
+        return result;
+    }
+
+    HandDetectionResult fullHouseResult = isFullHouse(valueCounts);
+    if (fullHouseResult.isMatch) {
+        result.rank = HandRank::FullHouse;
+        result.tiebreakers = fullHouseResult.tiebreakerCards;
+        return result;
+    }
+
+    HandDetectionResult flushResult = isFlush(cards);
+    if (flushResult.isMatch) {
+        result.rank = HandRank::Flush;
+        result.tiebreakers = flushResult.tiebreakerCards;
+        return result;
+    }
+
+    HandDetectionResult straightResult = isStraight(cards);
+    if (straightResult.isMatch) {
+        result.rank = HandRank::Straight;
+        result.tiebreakers = straightResult.tiebreakerCards;
+        return result;
+    }
+
+    HandDetectionResult tripsResult = isThreeOfAKind(valueCounts);
+    if (tripsResult.isMatch) {
+        result.rank = HandRank::ThreeOfAKind;
+        result.tiebreakers = tripsResult.tiebreakerCards;
+        return result;
+    }
+
+    HandDetectionResult twoPairResult = isTwoPair(valueCounts);
+    if (twoPairResult.isMatch) {
+        result.rank = HandRank::TwoPair;
+        result.tiebreakers = twoPairResult.tiebreakerCards;
+        return result;
+    }
+    
+    HandDetectionResult pairResult = isPair(valueCounts);
+    if (pairResult.isMatch) {
+        result.rank = HandRank::OnePair;
+        result.tiebreakers = pairResult.tiebreakerCards;
+        return result;
+    }
+
+    result.rank = HandRank::HighCard;
+
+    std::vector<int> highCards;
+    for (const Card& card : cards) {
+        highCards.push_back(static_cast<int>(card.getRank()));
+    }
+    std::sort(highCards.begin(), highCards.end(), std::greater<>());
+    result.tiebreakers = highCards;
+
+    return result;
 }
 
 std::ostream& operator<<(std::ostream&os, const EvaluatedHand& hand) {
