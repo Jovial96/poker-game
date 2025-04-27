@@ -34,6 +34,7 @@ class HandEvaluator {
 public:
     static EvaluatedHand evaluate(const std::vector<Card>& cards);
     static EvaluatedHand evaluateFiveCardHand(const std::vector<Card>& cards);
+    static int compareHands(const EvaluatedHand& handA, const EvaluatedHand& handB);
 private:
     //Helper Function 
     static HandDetectionResult isFlush(const std::vector<Card>& cards);

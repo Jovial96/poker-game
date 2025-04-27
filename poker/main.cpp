@@ -4,14 +4,31 @@
 #include <iostream>
 
 int main() {
-    std::vector<Card> fiveCards;
-    fiveCards.push_back(Card(Rank::Ace, Suit::Clubs));
-    fiveCards.push_back(Card(Rank::King, Suit::Spades));
-    fiveCards.push_back(Card(Rank::Four, Suit::Diamonds));
-    fiveCards.push_back(Card(Rank::Six, Suit::Clubs));
-    fiveCards.push_back(Card(Rank::Five, Suit::Clubs));
+    std::vector<Card> handA;
+    handA.push_back(Card(Rank::Ace, Suit::Clubs));
+    handA.push_back(Card(Rank::Two, Suit::Spades));
+    handA.push_back(Card(Rank::Three, Suit::Diamonds));
+    handA.push_back(Card(Rank::Four, Suit::Clubs));
+    handA.push_back(Card(Rank::Five, Suit::Clubs));
 
-    std::cout << HandEvaluator::evaluateFiveCardHand(fiveCards) << std::endl;
-    return 0;
+    std::vector<Card> handB;
+    handB.push_back(Card(Rank::Ace, Suit::Clubs));
+    handB.push_back(Card(Rank::King, Suit::Spades));
+    handB.push_back(Card(Rank::Four, Suit::Diamonds));
+    handB.push_back(Card(Rank::Six, Suit::Clubs));
+    handB.push_back(Card(Rank::Five, Suit::Clubs));
+
+    EvaluatedHand EvaluatedHandA = HandEvaluator::evaluateFiveCardHand(handA);
+    EvaluatedHand EvaluatedHandB = HandEvaluator::evaluateFiveCardHand(handB);
+
+    int result = HandEvaluator::compareHands(EvaluatedHandA, EvaluatedHandB);
+
+    if (result == 1) {
+        std::cout << "PlayerA wins!" << std::endl;
+    } else if (result == -1) {
+        std::cout << "PlayerB wins!" << std::endl;
+    } else {
+        std::cout << "It's a tie!" << std::endl;
+    }
 }
 

@@ -331,3 +331,24 @@ std::ostream& operator<<(std::ostream&os, const EvaluatedHand& hand) {
 
     return os;
 }
+
+int HandEvaluator::compareHands(const EvaluatedHand& evaluatedHandA, const EvaluatedHand& evaluatedHandB) {
+    if (evaluatedHandA.rank > evaluatedHandB.rank) {
+        return 1;
+    }
+
+    if (evaluatedHandA.rank < evaluatedHandB.rank) {
+        return -1;
+    }
+
+    for (size_t i = 0; i < std::min(evaluatedHandA.tiebreakers.size(), evaluatedHandB.tiebreakers.size()); ++i) {
+        if (evaluatedHandA.tiebreakers[i] > evaluatedHandB.tiebreakers[i]) {
+            return 1;
+        }
+        if (evaluatedHandA.tiebreakers[i] < evaluatedHandB.tiebreakers[i]) {
+            return -1;
+        }
+    }
+
+    return 0;
+}
