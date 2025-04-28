@@ -32,7 +32,7 @@ std::ostream& operator<<(std::ostream&os, const EvaluatedHand& hand);
 
 class HandEvaluator {
 public:
-    static EvaluatedHand evaluate(const std::vector<Card>& cards);
+    static EvaluatedHand findBestHand(const std::vector<Card>& cards);
     static EvaluatedHand evaluateFiveCardHand(const std::vector<Card>& cards);
     static int compareHands(const EvaluatedHand& handA, const EvaluatedHand& handB);
 private:

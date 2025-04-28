@@ -225,12 +225,6 @@ std::unordered_map<int, int> HandEvaluator::getValueCounts(const std::vector<Car
         valueCounts[static_cast<int>(card.getRank())]++;
     }
 
-    // Debug print: Display value counts
-    std::cout << "Value Counts:\n";
-    for (const auto& [rank, count] : valueCounts) {
-        std::cout << "Rank: " << rank << ", Count: " << count << std::endl;
-    }
-
     return valueCounts;
 }
 
@@ -351,4 +345,34 @@ int HandEvaluator::compareHands(const EvaluatedHand& evaluatedHandA, const Evalu
     }
 
     return 0;
+}
+
+EvaluatedHand HandEvaluator::findBestHand(const std::vector<Card>& cards) {
+    EvaluatedHand bestHand;  
+    int bestRank = -1;
+    std::vector<int> bestKickers;
+
+    std::vector<int> indices = {0, 1, 2, 3, 4, 5, 6};
+
+    std::vector<bool> combination(7, false);
+    std::fill(combination.begin(), combination.begin() + 5, true);
+
+    do {
+        std::vector<Card> fiveCards;
+        for (int i = 0; i < 7; ++i) {
+            if (combination[i]) {
+                fiveCards.push_back(cards[i]);
+            }
+        }
+
+        EvaluatedHand evaluatedHand = HandEvaluator::evaluateFiveCardHand(fiveCards);
+
+        if (static_cast<int>(evaluatedHand.rank) > bestRank || 
+            (static_cast<int>(evaluatedHand.rank) == bestRank && evaluatedHand.tiebreakers > bestKickers)) {
+            bestRank = static_cast<int>(evaluatedHand.rank);
+            bestHand = evaluatedHand; 
+        }
+    } while (std::prev_permutation(combination.begin(), combination.end()));
+
+    return bestHand;
 }

@@ -6,10 +6,12 @@
 int main() {
     std::vector<Card> handA;
     handA.push_back(Card(Rank::Ace, Suit::Clubs));
-    handA.push_back(Card(Rank::Two, Suit::Spades));
-    handA.push_back(Card(Rank::Three, Suit::Diamonds));
+    handA.push_back(Card(Rank::Two, Suit::Clubs));
+    handA.push_back(Card(Rank::Three, Suit::Clubs));
     handA.push_back(Card(Rank::Four, Suit::Clubs));
     handA.push_back(Card(Rank::Five, Suit::Clubs));
+    handA.push_back(Card(Rank::Seven, Suit::Clubs));
+    handA.push_back(Card(Rank::Eight, Suit::Clubs));
 
     std::vector<Card> handB;
     handB.push_back(Card(Rank::Ace, Suit::Clubs));
@@ -17,9 +19,11 @@ int main() {
     handB.push_back(Card(Rank::Four, Suit::Diamonds));
     handB.push_back(Card(Rank::Six, Suit::Clubs));
     handB.push_back(Card(Rank::Five, Suit::Clubs));
+    handB.push_back(Card(Rank::Nine, Suit::Clubs));
+    handB.push_back(Card(Rank::Jack, Suit::Clubs));
 
-    EvaluatedHand EvaluatedHandA = HandEvaluator::evaluateFiveCardHand(handA);
-    EvaluatedHand EvaluatedHandB = HandEvaluator::evaluateFiveCardHand(handB);
+    EvaluatedHand EvaluatedHandA = HandEvaluator::findBestHand(handA);
+    EvaluatedHand EvaluatedHandB = HandEvaluator::findBestHand(handB);
 
     int result = HandEvaluator::compareHands(EvaluatedHandA, EvaluatedHandB);
 
