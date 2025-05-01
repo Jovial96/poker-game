@@ -1,10 +1,9 @@
-#pragma once
-#include "PokerGame.h"
-#include "Deck.h"
-#include "Player.h"
+#include "./headers/PokerGame.h"
+#include "./headers/Deck.h"
+#include "./headers/Player.h"
 
-void PokerGame::addPlayer(const std::string& name) {
-    players.emplace_back(name);
+void PokerGame::addPlayer(const std::string& name, int initialChips) {
+    players.emplace_back(name, initialChips);
 }
 
 void PokerGame::startGame() {

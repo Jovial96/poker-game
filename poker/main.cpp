@@ -1,38 +1,21 @@
-#include "./headers/HandEvaluator.h"
-#include "./headers/Card.h"
-#include "./headers/CardTypes.h"
 #include <iostream>
+#include "./headers/PokerGame.h"
+#include <vector>
 
 int main() {
-    std::vector<Card> handA;
-    handA.push_back(Card(Rank::Ace, Suit::Clubs));
-    handA.push_back(Card(Rank::Two, Suit::Clubs));
-    handA.push_back(Card(Rank::Three, Suit::Clubs));
-    handA.push_back(Card(Rank::Four, Suit::Clubs));
-    handA.push_back(Card(Rank::Five, Suit::Clubs));
-    handA.push_back(Card(Rank::Seven, Suit::Clubs));
-    handA.push_back(Card(Rank::Eight, Suit::Clubs));
+    PokerGame game;
 
-    std::vector<Card> handB;
-    handB.push_back(Card(Rank::Ace, Suit::Clubs));
-    handB.push_back(Card(Rank::King, Suit::Spades));
-    handB.push_back(Card(Rank::Four, Suit::Diamonds));
-    handB.push_back(Card(Rank::Six, Suit::Clubs));
-    handB.push_back(Card(Rank::Five, Suit::Clubs));
-    handB.push_back(Card(Rank::Nine, Suit::Clubs));
-    handB.push_back(Card(Rank::Jack, Suit::Clubs));
+    game.addPlayer("Jovial", 100);
+    game.addPlayer("Yu Heng", 100);
 
-    EvaluatedHand EvaluatedHandA = HandEvaluator::findBestHand(handA);
-    EvaluatedHand EvaluatedHandB = HandEvaluator::findBestHand(handB);
+    game.startGame();
 
-    int result = HandEvaluator::compareHands(EvaluatedHandA, EvaluatedHandB);
+    game.dealFlop();
+    game.dealTurn();
+    game.dealRiver();
 
-    if (result == 1) {
-        std::cout << "PlayerA wins!" << std::endl;
-    } else if (result == -1) {
-        std::cout << "PlayerB wins!" << std::endl;
-    } else {
-        std::cout << "It's a tie!" << std::endl;
-    }
+    game.showCommunityCards();
+
+    return 0;
 }
 

@@ -12,7 +12,7 @@ private:
     std::vector<Player> players;
     std::vector<Card> communityCards;
 public:
-    void addPlayer(const std::string& name);
+    void addPlayer(const std::string& name, int initialChips);
     void startGame();
     void dealFlop();
     void dealTurn();
