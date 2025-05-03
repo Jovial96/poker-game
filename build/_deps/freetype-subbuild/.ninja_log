@@ -1,0 +1,21 @@
+# ninja log v6
+3	77	7679596446788535	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	76ac0f33bf862341
+3	77	7679596446788535	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-mkdir	76ac0f33bf862341
+78	11002	7679596556023697	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	fc7a08976ae82216
+78	11002	7679596556023697	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-download	fc7a08976ae82216
+11002	11154	7679596556103709	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	f2cea1d4bd1ca3a9
+11002	11154	7679596556103709	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-update	f2cea1d4bd1ca3a9
+11155	11242	7679596558444237	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	2c59732259297cb2
+11155	11242	7679596558444237	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-patch	2c59732259297cb2
+11243	11311	7679596559134401	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	eaf64d725a235963
+11243	11311	7679596559134401	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-configure	eaf64d725a235963
+11312	11379	7679596559814561	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	507dc52dce0d07c6
+11312	11379	7679596559814561	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-build	507dc52dce0d07c6
+11380	11449	7679596560514706	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	8a443b83a232a5cb
+11380	11449	7679596560514706	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-install	8a443b83a232a5cb
+11449	11518	7679596561204858	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	7d827909dc321aca
+11449	11518	7679596561204858	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-test	7d827909dc321aca
+11518	11615	7679596562155089	CMakeFiles/freetype-populate-complete	b791da0649b8ffb6
+11518	11615	7679596562155089	freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	b791da0649b8ffb6
+11518	11615	7679596562155089	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/CMakeFiles/freetype-populate-complete	b791da0649b8ffb6
+11518	11615	7679596562155089	C:/Users/jovia/poker-game/build/_deps/freetype-subbuild/freetype-populate-prefix/src/freetype-populate-stamp/freetype-populate-done	b791da0649b8ffb6

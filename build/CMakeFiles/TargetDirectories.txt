@@ -1,3 +1,5 @@
 C:/Users/jovia/poker-game/build/CMakeFiles/PokerGame.dir
+C:/Users/jovia/poker-game/build/CMakeFiles/package.dir
+C:/Users/jovia/poker-game/build/CMakeFiles/package_source.dir
 C:/Users/jovia/poker-game/build/CMakeFiles/edit_cache.dir
 C:/Users/jovia/poker-game/build/CMakeFiles/rebuild_cache.dir

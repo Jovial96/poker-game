@@ -1,0 +1,21 @@
+# ninja log v6
+2	72	7679596204624721	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	3d777eae26426236
+2	72	7679596204624721	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	3d777eae26426236
+4	9905	7679596370961699	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	8c88fb9c421cc907
+4	9905	7679596370961699	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	8c88fb9c421cc907
+9905	10046	7679596371031708	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	440449e9a837abfd
+9905	10046	7679596371031708	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	440449e9a837abfd
+10046	10115	7679596373062167	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	d7942d50b163c8da
+10046	10115	7679596373062167	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	d7942d50b163c8da
+10115	10183	7679596373752322	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	bbb02422549487b9
+10115	10183	7679596373752322	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	bbb02422549487b9
+10184	10252	7679596374432475	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1088eadd72965a30
+10184	10252	7679596374432475	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1088eadd72965a30
+10252	10321	7679596375132636	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	d675e659971b3d5c
+10252	10321	7679596375132636	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	d675e659971b3d5c
+10322	10389	7679596375802785	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	8a14cc26c1fd8b56
+10322	10389	7679596375802785	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	8a14cc26c1fd8b56
+10389	10485	7679596376763001	CMakeFiles/sfml-populate-complete	9b997001ab2ad9ab
+10389	10485	7679596376763001	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	9b997001ab2ad9ab
+10389	10485	7679596376763001	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	9b997001ab2ad9ab
+10389	10485	7679596376763001	C:/Users/jovia/poker-game/build/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	9b997001ab2ad9ab

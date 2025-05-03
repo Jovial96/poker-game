@@ -643,3 +643,1254 @@ events:
       Running the CXX compiler's linker: "Configured with: ../configure --prefix=/R/winlibs_staging_ucrt64/inst_gcc-14.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r3' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_ucrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_ucrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_ucrt64/gcc-14.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_ucrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_ucrt/custombuilt64/share/binutils/bin/ld.exe" "--version"
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/mingw64/share/cmake-3.31/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/mingw64/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build/_deps/sfml-src/src/SFML/System/CMakeLists.txt:69 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1ysq41"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1ysq41"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1ysq41'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ec984
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ec984.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1ysq41/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_ec984.dir/src.c.obj -o cmTC_ec984.exe -Wl,--out-implib,libcmTC_ec984.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake:98 (try_compile)"
+      - "build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:317 (check_include_file_cxx)"
+    checks:
+      - "Looking for C++ include dinput.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-on98kb"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-on98kb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-on98kb'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_d0432
+        [1/2] C:\\mingw64\\bin\\c++.exe   -std=gnu++20 -o CMakeFiles/cmTC_d0432.dir/CheckIncludeFile.cxx.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-on98kb/CheckIncludeFile.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe   CMakeFiles/cmTC_d0432.dir/CheckIncludeFile.cxx.obj -o cmTC_d0432.exe -Wl,--out-implib,libcmTC_d0432.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:342 (check_cxx_source_compiles)"
+    checks:
+      - "Performing Test ATOMIC_TEST"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kyjjkj"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kyjjkj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "ATOMIC_TEST"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kyjjkj'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_e5b6f
+        [1/2] C:\\mingw64\\bin\\c++.exe -DATOMIC_TEST  -std=gnu++20 -o CMakeFiles/cmTC_e5b6f.dir/src.cxx.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kyjjkj/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe   CMakeFiles/cmTC_e5b6f.dir/src.cxx.obj -o cmTC_e5b6f.exe -Wl,--out-implib,libcmTC_e5b6f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFiles.cmake:141 (try_compile)"
+      - "build/_deps/ogg-src/CMakeLists.txt:57 (check_include_files)"
+    checks:
+      - "Looking for include file inttypes.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-x06513"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-x06513"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-x06513'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_5fb34
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_5fb34.dir/INCLUDE_INTTYPES_H.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-x06513/INCLUDE_INTTYPES_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_5fb34.dir/INCLUDE_INTTYPES_H.c.obj -o cmTC_5fb34.exe -Wl,--out-implib,libcmTC_5fb34.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFiles.cmake:141 (try_compile)"
+      - "build/_deps/ogg-src/CMakeLists.txt:58 (check_include_files)"
+    checks:
+      - "Looking for include file stdint.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-r7y8au"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-r7y8au"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-r7y8au'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_951f4
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_951f4.dir/INCLUDE_STDINT_H.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-r7y8au/INCLUDE_STDINT_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_951f4.dir/INCLUDE_STDINT_H.c.obj -o cmTC_951f4.exe -Wl,--out-implib,libcmTC_951f4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFiles.cmake:141 (try_compile)"
+      - "build/_deps/ogg-src/CMakeLists.txt:59 (check_include_files)"
+    checks:
+      - "Looking for include file sys/types.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o31lb1"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o31lb1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "INCLUDE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o31lb1'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_8162a
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_8162a.dir/INCLUDE_SYS_TYPES_H.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o31lb1/INCLUDE_SYS_TYPES_H.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_8162a.dir/INCLUDE_SYS_TYPES_H.c.obj -o cmTC_8162a.exe -Wl,--out-implib,libcmTC_8162a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:262 (check_include_file)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1dwzd"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1dwzd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1dwzd'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_765c1
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_765c1.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1dwzd/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_765c1.dir/CheckIncludeFile.c.obj -o cmTC_765c1.exe -Wl,--out-implib,libcmTC_765c1.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:263 (check_include_file)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zyles0"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zyles0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zyles0'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_699a9
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_699a9.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zyles0/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_699a9.dir/CheckIncludeFile.c.obj -o cmTC_699a9.exe -Wl,--out-implib,libcmTC_699a9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:264 (check_include_file)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i93j5l"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i93j5l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i93j5l'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_10462
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_10462.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i93j5l/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_10462.dir/CheckIncludeFile.c.obj -o cmTC_10462.exe -Wl,--out-implib,libcmTC_10462.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:3 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int16_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2sgmax"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2sgmax"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2sgmax'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_1feb7
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_1feb7.dir/INT16_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2sgmax/INT16_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_1feb7.dir/INT16_SIZE.c.obj -o cmTC_1feb7.exe -Wl,--out-implib,libcmTC_1feb7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:4 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of uint16_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-dvrtkb"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-dvrtkb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_UINT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-dvrtkb'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_5bb4f
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_5bb4f.dir/UINT16_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-dvrtkb/UINT16_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_5bb4f.dir/UINT16_SIZE.c.obj -o cmTC_5bb4f.exe -Wl,--out-implib,libcmTC_5bb4f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:5 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of u_int16_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_U_INT16_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_fcf7c
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_fcf7c.dir/U_INT16_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi/U_INT16_SIZE.c
+        FAILED: CMakeFiles/cmTC_fcf7c.dir/U_INT16_SIZE.c.obj 
+        C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_fcf7c.dir/U_INT16_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi/U_INT16_SIZE.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi/U_INT16_SIZE.c:27:22: error: 'u_int16_t' undeclared here (not in a function); did you mean 'uint16_t'?
+           27 | #define SIZE (sizeof(u_int16_t))
+              |                      ^~~~~~~~~
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-nl9wgi/U_INT16_SIZE.c:29:12: note: in expansion of macro 'SIZE'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:6 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int32_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-v25q0l"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-v25q0l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-v25q0l'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_a9dd9
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_a9dd9.dir/INT32_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-v25q0l/INT32_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_a9dd9.dir/INT32_SIZE.c.obj -o cmTC_a9dd9.exe -Wl,--out-implib,libcmTC_a9dd9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:7 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of uint32_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-homlj4"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-homlj4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_UINT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-homlj4'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_f616c
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_f616c.dir/UINT32_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-homlj4/UINT32_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_f616c.dir/UINT32_SIZE.c.obj -o cmTC_f616c.exe -Wl,--out-implib,libcmTC_f616c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:8 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of u_int32_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_U_INT32_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_e209b
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_e209b.dir/U_INT32_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh/U_INT32_SIZE.c
+        FAILED: CMakeFiles/cmTC_e209b.dir/U_INT32_SIZE.c.obj 
+        C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_e209b.dir/U_INT32_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh/U_INT32_SIZE.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh/U_INT32_SIZE.c:27:22: error: 'u_int32_t' undeclared here (not in a function); did you mean 'uint32_t'?
+           27 | #define SIZE (sizeof(u_int32_t))
+              |                      ^~~~~~~~~
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-d91lyh/U_INT32_SIZE.c:29:12: note: in expansion of macro 'SIZE'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^~~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:9 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int64_t"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o40dc0"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o40dc0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT64_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o40dc0'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_15793
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_15793.dir/INT64_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-o40dc0/INT64_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_15793.dir/INT64_SIZE.c.obj -o cmTC_15793.exe -Wl,--out-implib,libcmTC_15793.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:10 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of short"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-k4yorj"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-k4yorj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SHORT_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-k4yorj'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_2fa02
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_2fa02.dir/SHORT_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-k4yorj/SHORT_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_2fa02.dir/SHORT_SIZE.c.obj -o cmTC_2fa02.exe -Wl,--out-implib,libcmTC_2fa02.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:11 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of int"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-rg8f7g"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-rg8f7g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INT_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-rg8f7g'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_b0d62
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_b0d62.dir/INT_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-rg8f7g/INT_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_b0d62.dir/INT_SIZE.c.obj -o cmTC_b0d62.exe -Wl,--out-implib,libcmTC_b0d62.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:12 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of long"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-enkyah"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-enkyah"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LONG_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-enkyah'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ce95b
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_ce95b.dir/LONG_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-enkyah/LONG_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_ce95b.dir/LONG_SIZE.c.obj -o cmTC_ce95b.exe -Wl,--out-implib,libcmTC_ce95b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:156 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckTypeSize.cmake:283 (__check_type_size_impl)"
+      - "build/_deps/ogg-src/cmake/CheckSizes.cmake:13 (check_type_size)"
+      - "build/_deps/ogg-src/CMakeLists.txt:69 (include)"
+    checks:
+      - "Check size of long long"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-47vvwp"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-47vvwp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/ogg-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LONG_LONG_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-47vvwp'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_a67a3
+        [1/2] C:\\mingw64\\bin\\gcc.exe    -o CMakeFiles/cmTC_a67a3.dir/LONG_LONG_SIZE.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-47vvwp/LONG_LONG_SIZE.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe   CMakeFiles/cmTC_a67a3.dir/LONG_LONG_SIZE.c.obj -o cmTC_a67a3.exe -Wl,--out-implib,libcmTC_a67a3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/cmake/UseSystemExtensions.cmake:3 (check_c_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:107 (include)"
+    checks:
+      - "Performing Test HAVE_MBSTATE"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-8xpqil"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-8xpqil"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_MBSTATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-8xpqil'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_3e61b
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_MBSTATE  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_3e61b.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-8xpqil/src.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-8xpqil/src.c:4:9: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+            4 |     int main() { return 0; }
+              |         ^~~~
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_3e61b.dir/src.c.obj -o cmTC_3e61b.exe -Wl,--out-implib,libcmTC_3e61b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/cmake/UseSystemExtensions.cmake:16 (check_c_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:107 (include)"
+    checks:
+      - "Performing Test DODEFINE_EXTENSIONS"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-saaisn"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-saaisn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "DODEFINE_EXTENSIONS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-saaisn'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_d3d67
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DDODEFINE_EXTENSIONS  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_d3d67.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-saaisn/src.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-saaisn/src.c:36:9: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+           36 |     int main() { return 0; }
+              |         ^~~~
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_d3d67.dir/src.c.obj -o cmTC_d3d67.exe -Wl,--out-implib,libcmTC_d3d67.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:111 (check_include_file)"
+    checks:
+      - "Looking for byteswap.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-vg5833"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-vg5833"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BYTESWAP_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-vg5833'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_c0e43
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_c0e43.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-vg5833/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_c0e43.dir/CheckIncludeFile.c.obj 
+        C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_c0e43.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-vg5833/CheckIncludeFile.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-vg5833/CheckIncludeFile.c:1:10: fatal error: byteswap.h: No such file or directory
+            1 | #include <byteswap.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:112 (check_include_file)"
+    checks:
+      - "Looking for inttypes.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-ypk3kh"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-ypk3kh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-ypk3kh'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_b811c
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_b811c.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-ypk3kh/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_b811c.dir/CheckIncludeFile.c.obj -o cmTC_b811c.exe -Wl,--out-implib,libcmTC_b811c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:114 (check_include_file)"
+    checks:
+      - "Looking for stdbool.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zgpf5f"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zgpf5f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STDBOOL_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zgpf5f'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_427cf
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_427cf.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-zgpf5f/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_427cf.dir/CheckIncludeFile.c.obj -o cmTC_427cf.exe -Wl,--out-implib,libcmTC_427cf.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:115 (check_include_file)"
+    checks:
+      - "Looking for arm_neon.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-iztxw4"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-iztxw4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "FLAC__HAS_NEONINTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-iztxw4'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_7cb1f
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_7cb1f.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-iztxw4/CheckIncludeFile.c
+        FAILED: CMakeFiles/cmTC_7cb1f.dir/CheckIncludeFile.c.obj 
+        C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_7cb1f.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-iztxw4/CheckIncludeFile.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-iztxw4/CheckIncludeFile.c:1:10: fatal error: arm_neon.h: No such file or directory
+            1 | #include <arm_neon.h>
+              |          ^~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:124 (check_include_file)"
+    checks:
+      - "Looking for x86intrin.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1761p"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1761p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "FLAC__HAS_X86INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1761p'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_22d96
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_22d96.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u1761p/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_22d96.dir/CheckIncludeFile.c.obj -o cmTC_22d96.exe -Wl,--out-implib,libcmTC_22d96.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/flac-src/CMakeLists.txt:127 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1dpx88"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1dpx88"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1dpx88'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_9b026
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=fseeko -o CMakeFiles/cmTC_9b026.dir/CheckFunctionExists.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-1dpx88/CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=fseeko  CMakeFiles/cmTC_9b026.dir/CheckFunctionExists.c.obj -o cmTC_9b026.exe -Wl,--out-implib,libcmTC_9b026.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:129 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BSWAP16"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kzsnoq"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kzsnoq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BSWAP16"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kzsnoq'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_241ad
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_BSWAP16  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_241ad.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kzsnoq/src.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kzsnoq/src.c:1:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+            1 | int main() { return __builtin_bswap16 (0) ; }
+              |     ^~~~
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_241ad.dir/src.c.obj -o cmTC_241ad.exe -Wl,--out-implib,libcmTC_241ad.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:130 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BSWAP32"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u8l2od"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u8l2od"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_BSWAP32"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u8l2od'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ef064
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_BSWAP32  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_ef064.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u8l2od/src.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-u8l2od/src.c:1:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+            1 | int main() { return __builtin_bswap32 (0) ; }
+              |     ^~~~
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_ef064.dir/src.c.obj -o cmTC_ef064.exe -Wl,--out-implib,libcmTC_ef064.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "build/_deps/flac-src/CMakeLists.txt:131 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_LANGINFO_CODESET"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2brwbn"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2brwbn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LANGINFO_CODESET"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2brwbn'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_0e9d6
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_LANGINFO_CODESET  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_0e9d6.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2brwbn/src.c
+        FAILED: CMakeFiles/cmTC_0e9d6.dir/src.c.obj 
+        C:\\mingw64\\bin\\gcc.exe -DHAVE_LANGINFO_CODESET  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_0e9d6.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2brwbn/src.c
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-2brwbn/src.c:2:14: fatal error: langinfo.h: No such file or directory
+            2 |     #include <langinfo.h>
+              |              ^~~~~~~~~~~~
+        compilation terminated.\x0d
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:142 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_WERROR_FLAG"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-084urp"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-084urp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_WERROR_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-084urp'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_33109
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_WERROR_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -Werror -o CMakeFiles/cmTC_33109.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-084urp/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_33109.dir/src.c.obj -o cmTC_33109.exe -Wl,--out-implib,libcmTC_33109.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:143 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_DECL_AFTER_STMT_FLAG"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-pfr6i6"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-pfr6i6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_DECL_AFTER_STMT_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-pfr6i6'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_3e260
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_DECL_AFTER_STMT_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -Wdeclaration-after-statement -o CMakeFiles/cmTC_3e260.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-pfr6i6/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_3e260.dir/src.c.obj -o cmTC_3e260.exe -Wl,--out-implib,libcmTC_3e260.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:144 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_STACKREALIGN_FLAG"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-09l7l6"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-09l7l6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_STACKREALIGN_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-09l7l6'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_a0472
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_STACKREALIGN_FLAG  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -mstackrealign -o CMakeFiles/cmTC_a0472.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-09l7l6/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_a0472.dir/src.c.obj -o cmTC_a0472.exe -Wl,--out-implib,libcmTC_a0472.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/CMakeLists.txt:145 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_WEFFCXX_FLAG"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-945d5u"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-945d5u"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_WEFFCXX_FLAG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-945d5u'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_75ca7
+        [1/2] C:\\mingw64\\bin\\c++.exe -DHAVE_WEFFCXX_FLAG  -Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef   -std=gnu++20   -Weffc++ -o CMakeFiles/cmTC_75ca7.dir/src.cxx.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-945d5u/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\c++.exe -Wall -Wextra -Wcast-align -Wshadow -Wwrite-strings -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Wsign-promo -Wundef  CMakeFiles/cmTC_75ca7.dir/src.cxx.obj -o cmTC_75ca7.exe -Wl,--out-implib,libcmTC_75ca7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:3 (check_include_file)"
+    checks:
+      - "Looking for cpuid.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-y5ii71"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-y5ii71"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_CPUID_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-y5ii71'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ab959
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_ab959.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-y5ii71/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_ab959.dir/CheckIncludeFile.c.obj -o cmTC_ab959.exe -Wl,--out-implib,libcmTC_ab959.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckIncludeFile.cmake:99 (try_compile)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:4 (check_include_file)"
+    checks:
+      - "Looking for sys/param.h"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-3hr9fj"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-3hr9fj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_SYS_PARAM_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-3hr9fj'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_76c05
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_76c05.dir/CheckIncludeFile.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-3hr9fj/CheckIncludeFile.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_76c05.dir/CheckIncludeFile.c.obj -o cmTC_76c05.exe -Wl,--out-implib,libcmTC_76c05.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:7 (check_function_exists)"
+    checks:
+      - "Looking for lround"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kjdfhx"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kjdfhx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LROUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kjdfhx'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_782ac
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=lround -o CMakeFiles/cmTC_782ac.dir/CheckFunctionExists.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kjdfhx/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'lround'; expected 'long int(double)' [-Wbuiltin-declaration-mismatch]
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kjdfhx/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-kjdfhx/CheckFunctionExists.c:1:1: note: 'lround' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=lround  CMakeFiles/cmTC_782ac.dir/CheckFunctionExists.c.obj -o cmTC_782ac.exe -Wl,--out-implib,libcmTC_782ac.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "build/_deps/flac-src/cmake/CheckCPUArch.cmake:6 (try_compile)"
+      - "build/_deps/flac-src/cmake/CheckCPUArch.cmake:18 (_CHECK_CPU_ARCH)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:13 (check_cpu_arch_x64)"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/_deps/flac-build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/jovia/poker-game/build/_deps/flac-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_FLAC__CPU_X86_64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/_deps/flac-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_d4244
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline -o CMakeFiles/cmTC_d4244.dir/CheckCPUArch.c.obj -c C:/Users/jovia/poker-game/build/_deps/flac-build/CMakeFiles/CMakeTmp/CheckCPUArch.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_d4244.dir/CheckCPUArch.c.obj -o cmTC_d4244.exe -Wl,--out-implib,libcmTC_d4244.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "C:/mingw64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "build/_deps/flac-src/src/libFLAC/CMakeLists.txt:101 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_ASSOC_MATH"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i9weyh"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i9weyh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_ASSOC_MATH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i9weyh'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_257d6
+        [1/2] C:\\mingw64\\bin\\gcc.exe -DHAVE_ASSOC_MATH  -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline     -fassociative-math -fno-signed-zeros -fno-trapping-math -freciprocal-math -o CMakeFiles/cmTC_257d6.dir/src.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-i9weyh/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  CMakeFiles/cmTC_257d6.dir/src.c.obj -o cmTC_257d6.exe -Wl,--out-implib,libcmTC_257d6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "build/_deps/flac-src/microbench/CMakeLists.txt:6 (check_function_exists)"
+    checks:
+      - "Looking for clock_gettime"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-eixdi9"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-eixdi9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/flac-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_CLOCK_GETTIME"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-eixdi9'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_ec21f
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime -o CMakeFiles/cmTC_ec21f.dir/CheckFunctionExists.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-eixdi9/CheckFunctionExists.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime  CMakeFiles/cmTC_ec21f.dir/CheckFunctionExists.c.obj -o cmTC_ec21f.exe -Wl,--out-implib,libcmTC_ec21f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lrt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        FAILED: cmTC_ec21f.exe 
+        C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -Wall -Wextra -Wstrict-prototypes -Wmissing-prototypes -Waggregate-return -Wcast-align -Wnested-externs -Wshadow -Wundef -Wmissing-declarations -Winline  -DCHECK_FUNCTION_EXISTS=clock_gettime  CMakeFiles/cmTC_ec21f.dir/CheckFunctionExists.c.obj -o cmTC_ec21f.exe -Wl,--out-implib,libcmTC_ec21f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lrt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lrt: No such file or directory\x0d
+        collect2.exe: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/mingw64/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "build/_deps/vorbis-src/CMakeLists.txt:62 (check_library_exists)"
+    checks:
+      - "Looking for floor in m"
+    directories:
+      source: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-57z3z6"
+      binary: "C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-57z3z6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/jovia/poker-game/build/_deps/sfml-src/cmake/Modules/;C:/Users/jovia/poker-game/build/_deps/vorbis-src/cmake"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+    buildResult:
+      variable: "HAVE_LIBM"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-57z3z6'
+        
+        Run Build Command(s): C:/mingw64/bin/ninja.exe -v cmTC_af265
+        [1/2] C:\\mingw64\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=floor -o CMakeFiles/cmTC_af265.dir/CheckFunctionExists.c.obj -c C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-57z3z6/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'floor'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-57z3z6/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/Users/jovia/poker-game/build/CMakeFiles/CMakeScratch/TryCompile-57z3z6/CheckFunctionExists.c:1:1: note: 'floor' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\mingw64\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=floor  CMakeFiles/cmTC_af265.dir/CheckFunctionExists.c.obj -o cmTC_af265.exe -Wl,--out-implib,libcmTC_af265.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

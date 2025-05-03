@@ -1,0 +1,21 @@
+# ninja log v6
+2	74	7679596936939240	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir	ca1dcb486d0f19d4
+2	74	7679596936939240	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir	ca1dcb486d0f19d4
+74	3661	7679596972811587	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download	105f47e797bb1a9d
+74	3661	7679596972811587	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download	105f47e797bb1a9d
+3661	3811	7679596972881589	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update	6e8ca7566835fe56
+3661	3811	7679596972881589	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update	6e8ca7566835fe56
+3811	3910	7679596975302139	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch	918d56d41a527417
+3811	3910	7679596975302139	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch	918d56d41a527417
+3910	3979	7679596975992302	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure	eceabd1d2e745ffd
+3910	3979	7679596975992302	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure	eceabd1d2e745ffd
+3979	4047	7679596976672451	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build	7859b5a696033dc8
+3979	4047	7679596976672451	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build	7859b5a696033dc8
+4047	4115	7679596977352600	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install	677798d55c86b5b4
+4047	4115	7679596977352600	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install	677798d55c86b5b4
+4115	4184	7679596978042751	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test	bedeb500803e0bda
+4115	4184	7679596978042751	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test	bedeb500803e0bda
+4184	4280	7679596979002964	CMakeFiles/vorbis-populate-complete	14414b6940918673
+4184	4280	7679596979002964	vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-done	14414b6940918673
+4184	4280	7679596979002964	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate-complete	14414b6940918673
+4184	4280	7679596979002964	C:/Users/jovia/poker-game/build/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-done	14414b6940918673

@@ -1,0 +1,21 @@
+# ninja log v6
+2	74	7679596735339018	flac-populate-prefix/src/flac-populate-stamp/flac-populate-mkdir	2fa383e3fe1d4d4d
+2	74	7679596735339018	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-mkdir	2fa383e3fe1d4d4d
+75	3382	7679596768409457	flac-populate-prefix/src/flac-populate-stamp/flac-populate-download	4360ff3c9d3ca8a3
+75	3382	7679596768409457	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-download	4360ff3c9d3ca8a3
+3382	3535	7679596768479481	flac-populate-prefix/src/flac-populate-stamp/flac-populate-update	874e5f791fb9c755
+3382	3535	7679596768479481	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-update	874e5f791fb9c755
+3535	3634	7679596770930025	flac-populate-prefix/src/flac-populate-stamp/flac-populate-patch	383c42f6e6f9a13f
+3535	3634	7679596770930025	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-patch	383c42f6e6f9a13f
+3634	3702	7679596771610174	flac-populate-prefix/src/flac-populate-stamp/flac-populate-configure	5d1720d5862ec875
+3634	3702	7679596771610174	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-configure	5d1720d5862ec875
+3702	3772	7679596772310347	flac-populate-prefix/src/flac-populate-stamp/flac-populate-build	42b39cadc8863a80
+3702	3772	7679596772310347	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-build	42b39cadc8863a80
+3773	3840	7679596772990488	flac-populate-prefix/src/flac-populate-stamp/flac-populate-install	d20d072ee8f4d34
+3773	3840	7679596772990488	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-install	d20d072ee8f4d34
+3840	3908	7679596773670638	flac-populate-prefix/src/flac-populate-stamp/flac-populate-test	f338a3759a13dffa
+3840	3908	7679596773670638	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-test	f338a3759a13dffa
+3909	4008	7679596774670868	CMakeFiles/flac-populate-complete	879b44dceb62175c
+3909	4008	7679596774670868	flac-populate-prefix/src/flac-populate-stamp/flac-populate-done	879b44dceb62175c
+3909	4008	7679596774670868	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/CMakeFiles/flac-populate-complete	879b44dceb62175c
+3909	4008	7679596774670868	C:/Users/jovia/poker-game/build/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-done	879b44dceb62175c

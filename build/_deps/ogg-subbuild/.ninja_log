@@ -1,0 +1,21 @@
+# ninja log v6
+3	74	7679596568236445	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir	d3fba580b6a45f4a
+3	74	7679596568236445	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir	d3fba580b6a45f4a
+74	2476	7679596592264548	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download	f1e2bdcb0be3b665
+74	2476	7679596592264548	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download	f1e2bdcb0be3b665
+2476	2625	7679596592324565	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update	ca916dfe22bd8583
+2476	2625	7679596592324565	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update	ca916dfe22bd8583
+2627	2714	7679596594645091	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch	464399a686be19a9
+2627	2714	7679596594645091	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch	464399a686be19a9
+2714	2788	7679596595365245	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure	3acbccb13e885c81
+2714	2788	7679596595365245	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure	3acbccb13e885c81
+2788	2864	7679596596125424	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build	abdf647ae9c1d06b
+2788	2864	7679596596125424	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build	abdf647ae9c1d06b
+2864	2936	7679596596865589	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install	3829b402b0cca737
+2864	2936	7679596596865589	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install	3829b402b0cca737
+2936	3005	7679596597555753	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test	45f6bc11ae26ecc
+2936	3005	7679596597555753	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test	45f6bc11ae26ecc
+3005	3102	7679596598525971	CMakeFiles/ogg-populate-complete	d0a4e6f3ead4e7c
+3005	3102	7679596598525971	ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-done	d0a4e6f3ead4e7c
+3005	3102	7679596598525971	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate-complete	d0a4e6f3ead4e7c
+3005	3102	7679596598525971	C:/Users/jovia/poker-game/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-done	d0a4e6f3ead4e7c
