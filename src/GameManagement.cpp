@@ -1,4 +1,4 @@
-#include "./headers/GameManagement.h"
+#include "GameManagement.h"
 
 GameManagement::GameManagement(std::vector<Player> players) 
     : players(players), currentPlayerIndex(0), gameOver(false) {

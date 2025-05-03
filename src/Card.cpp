@@ -1,4 +1,4 @@
-#include "./headers/Card.h"
+#include "Card.h"
 #include <iostream>
 #include <string>
 
@@ -36,7 +36,7 @@ std::string suitToString(Suit suit) {
         case Suit::Clubs: return "Clubs";
         case Suit::Diamonds: return "Diamonds";
         case Suit::Hearts: return "Hearts";
-        case Suit::Spades: return "Spaces";
+        case Suit::Spades: return "Spades";
         default: return "?";
     }
 }

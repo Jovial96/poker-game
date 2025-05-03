@@ -1,5 +1,5 @@
-#include "./headers/Deck.h"
-#include "./headers/Card.h"
+#include "Deck.h"
+#include "Card.h"
 #include <random>
 #include <iostream>
 #include <algorithm>

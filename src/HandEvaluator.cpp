@@ -1,6 +1,6 @@
-#include "./headers/HandEvaluator.h"
-#include "./headers/Card.h"
-#include "./headers/CardTypes.h"
+#include "HandEvaluator.h"
+#include "Card.h"
+#include "CardTypes.h"
 #include <vector>
 #include <algorithm>
 #include <set>
